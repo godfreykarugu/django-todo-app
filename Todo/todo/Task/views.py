@@ -7,7 +7,7 @@ from . form import TaskForm
 
 def home(request):
     tasks = Task.objects.all().order_by('date_due')
-    return render(request,'home.html',{'tasks':tasks})
+    return render(request,'index.html',{'tasks':tasks})
 
 
 def todo(request):
